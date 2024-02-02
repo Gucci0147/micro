@@ -12,6 +12,7 @@ def index(request):
         if form.is_valid():
             form.save()
             # Redirect to a success page or login page
+            messages.success(request, ('Wrong password! Please try again'))
             return redirect('index')
     else:
         form = RegistrationForm()
